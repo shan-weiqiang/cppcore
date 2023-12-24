@@ -72,6 +72,7 @@
     },
     "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
     "C_Cpp.inlayHints.parameterNames.enabled": true,
+    "C_Cpp.intelliSenseEngine": "default",
     
     // macOS Modern Tweaks
     "editor.fontSize": 12,
