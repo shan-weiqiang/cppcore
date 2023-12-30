@@ -30,6 +30,13 @@ run echo "parse_git_branch() {" >> /home/swq/.bashrc \
     && echo "}" >> /home/swq/.bashrc \
     && echo "export PS1='\u@\h \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ '" >> /home/swq/.bashrc
 
+# install ohmyzsh
+RUN sh -c "$(wget -O- https://github.com/shan-weiqiang/zsh-in-docker/releases/download/v0.0.5/zsh-in-docker.1.sh)" -- \
+    -x \
+    -p https://github.com/zsh-users/zsh-completions \
+    -p https://github.com/zsh-users/zsh-autosuggestions \
+    -t robbyrussell
+
 # Set the working directory to the user's home directory
 WORKDIR /home/swq
 
